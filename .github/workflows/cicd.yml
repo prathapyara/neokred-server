@@ -20,7 +20,7 @@ jobs:
       - name: pull docker image
         run: docker pull prathapyara/neokred-server:latest  
       - name: run the docker image
-        run: docker run -d -p 4000:5000   
+        run: docker run -d -p 4000:5000 prathapyara/neokred-server:latest    
   
       
           
