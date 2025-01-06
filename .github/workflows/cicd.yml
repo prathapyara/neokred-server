@@ -1,0 +1,22 @@
+name: Deploy Node Application for Neokred
+
+on:
+  push:
+    branches:
+      - neokred-node
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+      - name: Login to Docker
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} 
+      - name: build docker image
+        run: docker build -t prathapcicd/nodejs .
+      - name: publish image
+        run:  docker push prathapcicd/nodejs:latest 
+  
+      
+          
