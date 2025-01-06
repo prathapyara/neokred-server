@@ -1,5 +1,5 @@
-FROM node:23-alpine.20
-WORKDIR ./app
+FROM node:23-alpine
+WORKDIR /app
 COPY package.json ./
 RUN npm install
 COPY . .
