@@ -16,7 +16,7 @@ jobs:
       - name: build docker image
         run: docker build -t prathapyara/neokred-server .
       - name: publish image
-        run:  docker push prathapcicd/nodejs:latest 
+        run:  docker push prathapyara/nodejs:latest 
   
       
           
